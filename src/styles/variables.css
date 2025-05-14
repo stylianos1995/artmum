@@ -1,0 +1,9 @@
+:root {
+  --primary-purple: #6B4E71;      /* Main purple */
+  --light-purple: #9B7B9E;        /* Lighter purple for accents */
+  --dark-purple: #4A3B4F;         /* Dark purple for text */
+  --lavender: #E6E1F0;           /* Very light purple for backgrounds */
+  --accent-purple: #8A6B8F;       /* Accent purple for buttons/hover */
+  --white: #FFFFFF;
+  --off-white: #F8F7FA;          /* Slightly off-white for contrast */
+}
