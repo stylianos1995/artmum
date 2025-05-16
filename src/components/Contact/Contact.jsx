@@ -11,7 +11,6 @@ const Contact = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Handle form submission here
     console.log(formData);
   };
 
@@ -26,10 +25,10 @@ const Contact = () => {
     <section className="contact" id="contact">
       <div className="contact-container single">
         <div className="contact-form">
-          <h2>Custom Order</h2>
+          <h2>Παραγγελία Έργου</h2>
           <form onSubmit={handleSubmit}>
             <div className="form-group">
-              <label htmlFor="name">Name</label>
+              <label htmlFor="name">Όνομα</label>
               <input
                 type="text"
                 id="name"
@@ -53,33 +52,33 @@ const Contact = () => {
             </div>
 
             <div className="form-group">
-              <label htmlFor="orderType">Order Type</label>
+              <label htmlFor="orderType">Τύπος Παραγγελίας</label>
               <select
                 id="orderType"
                 name="orderType"
                 value={formData.orderType}
                 onChange={handleChange}
               >
-                <option value="custom">Custom Artwork</option>
-                <option value="print">Print</option>
-                <option value="commission">Commission</option>
+                <option value="custom">Προσαρμοσμένο Έργο</option>
+                <option value="print">Εκτύπωση</option>
+                <option value="commission">Παραγγελία</option>
               </select>
             </div>
 
             <div className="form-group">
-              <label htmlFor="message">Project Details</label>
+              <label htmlFor="message">Λεπτομέρειες Έργου</label>
               <textarea
                 id="message"
                 name="message"
                 value={formData.message}
                 onChange={handleChange}
                 required
-                placeholder="Tell me about your project..."
+                placeholder="Πείτε μας για το έργο σας..."
               />
             </div>
 
             <button type="submit" className="submit-btn">
-              Send Request
+              Στείλετε Αίτηση
             </button>
           </form>
         </div>

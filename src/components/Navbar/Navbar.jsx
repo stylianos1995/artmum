@@ -26,10 +26,10 @@ const Navbar = () => {
         </div>
         
         <div className={`navbar-links ${isMenuOpen ? 'active' : ''}`}>
-          <a href="#home" className="nav-link" onClick={handleLinkClick}>Home</a>
-          <a href="#work" className="nav-link" onClick={handleLinkClick}>Gallery</a>
-          <a href="#about" className="nav-link" onClick={handleLinkClick}>About</a>
-          <a href="#contact" className="nav-link" onClick={handleLinkClick}>Contact</a>
+          <a href="#home" className="nav-link" onClick={handleLinkClick}>Αρχική</a>
+          <a href="#work" className="nav-link" onClick={handleLinkClick}>Έργα</a>
+          <a href="#about" className="nav-link" onClick={handleLinkClick}>Σχετικά</a>
+          <a href="#contact" className="nav-link" onClick={handleLinkClick}>Επικοινωνία</a>
         </div>
 
         <button 

@@ -21,15 +21,15 @@ const Hero = () => {
 
         <div className="hero-text">
           <h1 className="hero-title">
-            <span className="line">Welcome to</span>
-            <span className="line">My Atelier</span>
+            <span className="line">Καλώς ήρθατε στο</span>
+            <span className="line">Atelier μου</span>
           </h1>
           <p className="hero-subtitle">
-            Where creativity meets craftsmanship
+            Όπου η δημιουργικότητα συναντά την τέχνη
           </p>
           <div className="hero-cta">
-            <a href="#work" className="cta-button">View Gallery</a>
-            <a href="#contact" className="cta-button secondary">Commission Work</a>
+            <a href="#work" className="cta-button">Δείτε τη Συλλογή</a>
+            <a href="#contact" className="cta-button secondary">Παραγγελία Έργου</a>
           </div>
         </div>
       </div>

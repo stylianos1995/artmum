@@ -37,11 +37,11 @@ const Footer = () => {
       <div className="footer-content">
         <div className="footer-section">
           <h3>ArtMum</h3>
-          <p>Creating unique artistic experiences through various mediums. Let's bring your vision to life.</p>
+          <p>Δημιουργώντας μοναδικές καλλιτεχνικές εμπειρίες μέσα από διάφορα μέσα. Ας δώσουμε ζωή στη δική σας όραση.</p>
         </div>
 
         <div className="footer-section">
-          <h4>Social Media</h4>
+          <h4>Κοινωνικά Δίκτυα</h4>
           <div className="social-links">
             {socialLinks.map((social) => (
               <div key={social.platform} className="social-item">
@@ -51,7 +51,7 @@ const Footer = () => {
                   <i 
                     className={`${social.icon} social-icon`}
                     onClick={() => copyToClipboard(social.handle)}
-                    title={`Copy ${social.platform} handle`}
+                    title={`Αντιγραφή ${social.platform}`}
                   ></i>
                 </div>
               </div>
@@ -60,7 +60,7 @@ const Footer = () => {
         </div>
 
         <div className="footer-section">
-          <h4>Contact Info</h4>
+          <h4>Στοιχεία Επικοινωνίας</h4>
           <ul className="contact-info">
             <li>
               <i className="fas fa-envelope"></i>
@@ -68,38 +68,38 @@ const Footer = () => {
             </li>
             <li>
               <i className="fas fa-phone"></i>
-              <span>+1 234 567 890</span>
+              <span>+30 123 456 7890</span>
             </li>
             <li>
               <i className="fas fa-map-marker-alt"></i>
-              <span>City, Country</span>
+              <span>Πόλη, Ελλάδα</span>
             </li>
           </ul>
         </div>
 
         <div className="footer-section">
           <h4>Newsletter</h4>
-          <p>Subscribe to receive updates on new artwork and exhibitions.</p>
+          <p>Εγγραφείτε για να λαμβάνετε ενημερώσεις για νέα έργα και εκθέσεις.</p>
           <form className="newsletter-form">
-            <input type="email" placeholder="Enter your email" />
-            <button type="submit">Subscribe</button>
+            <input type="email" placeholder="Εισάγετε το email σας" />
+            <button type="submit">Εγγραφή</button>
           </form>
         </div>
       </div>
 
       <div className="footer-bottom">
         <div className="footer-bottom-content">
-          <p>&copy; {currentYear} ArtMum. All rights reserved.</p>
+          <p>&copy; {currentYear} ArtMum. Με επιφύλαξη παντός δικαιώματος.</p>
           <div className="footer-links">
-            <a href="#">Privacy Policy</a>
-            <a href="#">Terms of Service</a>
+            <a href="#">Πολιτική Απορρήτου</a>
+            <a href="#">Όροι Χρήσης</a>
           </div>
         </div>
       </div>
 
       {showCopyMessage && (
         <div className="copy-message">
-          Copied to clipboard!
+          Αντιγράφηκε!
         </div>
       )}
     </footer>

@@ -1,5 +1,10 @@
 import { useState, useEffect } from 'react';
 import './MyWork.css';
+import image1 from '../../assets/bear.jpg';
+import image2 from '../../assets/room.jpg';
+import image3 from '../../assets/santa.jpg';
+import image4 from '../../assets/truck.jpg';
+import image5 from '../../assets/fairy.jpg';
 
 const MyWork = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -7,31 +12,45 @@ const MyWork = () => {
   const artworkItems = [
     {
       id: 1,
-      title: "Abstract Dreams",
-      description: "A journey through colors and emotions",
-      image: "https://placehold.co/1920x1080", // Replace with your artwork
-      category: "Digital Art"
+      title: "Αρκούδος",
+      description: "Χειροποίητα προσκλήσεις με σχέδια και χρώματα της επιλογής σας",
+      image: image1,
+      category: "Προσκλήσεις"
     },
     {
       id: 2,
-      title: "Nature's Whisper",
-      description: "Capturing the essence of natural beauty",
-      image: "https://placehold.co/1920x1080", // Replace with your artwork
-      category: "Photography"
+      title: "Ψιθυρίσματα της Φύσης",
+      description: "Καταγράφοντας την ουσία της φυσικής ομορφιάς",
+      image: image2,
+      category: "Φωτογραφία"
     },
     {
       id: 3,
-      title: "Urban Stories",
-      description: "City life through an artistic lens",
-      image: "https://placehold.co/1920x1080", // Replace with your artwork
-      category: "Mixed Media"
+      title: "Αστικές Ιστορίες",
+      description: "Η ζωή της πόλης μέσα από ένα καλλιτεχνικό πρίσμα",
+      image: image3,
+      category: "Μικτή Τεχνική"
+    },
+    {
+      id: 1,
+      title: "Αφηρημένα Όνειρα",
+      description: "Ένα ταξίδι μέσα από χρώματα και συναισθήματα",
+      image: image4,
+      category: "Ψηφιακή Τέχνη"
+    },
+    {
+      id: 1,
+      title: "Αφηρημένα Όνειρα",
+      description: "Ένα ταξίδι μέσα από χρώματα και συναισθήματα",
+      image: image5,
+      category: "Ψηφιακή Τέχνη"
     }
   ];
 
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % artworkItems.length);
-    }, 5000); // Change artwork every 5 seconds
+    }, 5000);
 
     return () => clearInterval(interval);
   }, []);
@@ -59,7 +78,7 @@ const MyWork = () => {
                 <h2>{item.title}</h2>
                 <p>{item.description}</p>
                 <a href="#" className="see-more">
-                  See More
+                  Δείτε Περισσότερα
                   <i className="fas fa-arrow-right"></i>
                 </a>
               </div>
