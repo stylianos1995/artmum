@@ -1,6 +1,9 @@
 .contact {
   padding: 6rem 2rem;
   background: var(--lavender);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
 }
 
 .contact-container {
@@ -9,6 +12,7 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 4rem;
+  width: 100%;
 }
 
 .contact-container.single {
@@ -23,9 +27,10 @@
 }
 
 .contact-info h2, .contact-form h2 {
-  font-size: 2rem;
-  margin-bottom: 1rem;
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
   color: var(--dark-purple);
+  text-align: center;
 }
 
 .contact-info p {
@@ -78,25 +83,27 @@
 
 /* Form Styles */
 .form-group {
-  margin-bottom: 1.5rem;
+  margin-bottom: 2rem;
 }
 
 .form-group label {
   display: block;
-  margin-bottom: 0.5rem;
-  color: var(--primary-purple);
-  font-size: 0.9rem;
+  margin-bottom: 0.8rem;
+  color: var(--dark-purple);
+  font-size: 1rem;
+  font-weight: 500;
 }
 
 .form-group input,
 .form-group select,
 .form-group textarea {
   width: 100%;
-  padding: 0.8rem;
-  border: 1px solid var(--light-purple);
-  border-radius: 5px;
+  padding: 1rem;
+  border: 2px solid var(--light-purple);
+  border-radius: 10px;
   font-size: 1rem;
-  transition: border-color 0.3s ease;
+  transition: all 0.3s ease;
+  background: var(--off-white);
 }
 
 .form-group input:focus,
@@ -104,7 +111,8 @@
 .form-group textarea:focus {
   outline: none;
   border-color: var(--primary-purple);
-  box-shadow: 0 0 0 2px rgba(107, 78, 113, 0.1);
+  box-shadow: 0 0 0 4px rgba(107, 78, 113, 0.1);
+  background: var(--white);
 }
 
 .form-group textarea {
@@ -114,39 +122,83 @@
 
 .submit-btn {
   width: 100%;
-  padding: 1rem;
+  padding: 1.2rem;
   background: var(--primary-purple);
   color: var(--white);
   border: none;
-  border-radius: 5px;
-  font-size: 1rem;
+  border-radius: 10px;
+  font-size: 1.1rem;
+  font-weight: 600;
   cursor: pointer;
   transition: all 0.3s ease;
+  margin-top: 1rem;
 }
 
 .submit-btn:hover {
   background: var(--accent-purple);
   transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(107, 78, 113, 0.2);
+}
+
+.submit-btn:active {
+  transform: translateY(0);
 }
 
 .contact-form {
   width: 100%;
-  max-width: 500px;
+  max-width: 600px;
   margin: 0 auto;
   background: var(--white);
-  box-shadow: 0 4px 24px rgba(107, 78, 113, 0.1);
-  border-radius: 15px;
-  padding: 2rem;
+  box-shadow: 0 8px 32px rgba(107, 78, 113, 0.15);
+  border-radius: 20px;
+  padding: 3rem;
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
+  .contact {
+    padding: 4rem 1rem;
+  }
+
   .contact-container {
     grid-template-columns: 1fr;
     gap: 2rem;
   }
 
-  .contact-info, .contact-form {
+  .contact-form {
+    padding: 2rem;
+    margin: 0 1rem;
+  }
+
+  .contact-info h2, .contact-form h2 {
+    font-size: 2rem;
+  }
+
+  .form-group {
+    margin-bottom: 1.5rem;
+  }
+
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    padding: 0.8rem;
+  }
+
+  .submit-btn {
     padding: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact {
+    padding: 3rem 1rem;
+  }
+
+  .contact-form {
+    padding: 1.5rem;
+  }
+
+  .contact-info h2, .contact-form h2 {
+    font-size: 1.8rem;
   }
 }

@@ -1,4 +1,5 @@
 import './Hero.css';
+import profileImage from '../../assets/profile.jpg';
 
 const Hero = () => {
   return (
@@ -11,7 +12,7 @@ const Hero = () => {
         <div className="hero-profile">
           <div className="profile-image-container">
             <img 
-              src="https://placehold.co/400x400" 
+              src={profileImage} 
               alt="Artist Profile" 
               className="profile-image"
             />

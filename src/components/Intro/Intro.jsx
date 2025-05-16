@@ -7,7 +7,7 @@ const Intro = () => {
   useEffect(() => {
     const timer = setTimeout(() => {
       setIsLoading(false);
-    }, 4500); // Increased duration to 4.5 seconds
+    }, 4000); // Increased duration to 4 seconds to keep ArtMum visible longer
 
     return () => clearTimeout(timer);
   }, []);

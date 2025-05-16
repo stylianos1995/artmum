@@ -28,7 +28,7 @@
   height: 20px;
   background: var(--primary-purple);
   border-radius: 50%;
-  animation: drop 1.5s ease-in forwards;
+  animation: drop 0.8s cubic-bezier(0.4, 0, 0.2, 1) forwards;
 }
 
 .splash {
@@ -40,7 +40,7 @@
   height: 0;
   background: var(--primary-purple);
   border-radius: 50%;
-  animation: splash 1.5s ease-out 1.5s forwards;
+  animation: splash 0.8s ease-out 0.8s forwards;
 }
 
 .ripple {
@@ -56,19 +56,19 @@
 .ripple-1 {
   width: 0;
   height: 0;
-  animation: ripple 1.5s ease-out 1.5s infinite;
+  animation: ripple 0.8s ease-out 0.8s forwards;
 }
 
 .ripple-2 {
   width: 0;
   height: 0;
-  animation: ripple 1.5s ease-out 1.8s infinite;
+  animation: ripple 0.8s ease-out 1s forwards;
 }
 
 .ripple-3 {
   width: 0;
   height: 0;
-  animation: ripple 1.5s ease-out 2.1s infinite;
+  animation: ripple 0.8s ease-out 1.2s forwards;
 }
 
 .intro-text {
@@ -78,7 +78,7 @@
   transform: translate(-50%, -50%);
   display: flex;
   opacity: 0;
-  animation: fadeIn 0.5s ease-out 3s forwards;
+  animation: fadeIn 0.5s ease-out 2s forwards;
 }
 
 .letter {
@@ -91,19 +91,25 @@
   animation: letterDrop 0.5s ease-out forwards;
 }
 
-.letter:nth-child(1) { animation-delay: 3.1s; }
-.letter:nth-child(2) { animation-delay: 3.2s; }
-.letter:nth-child(3) { animation-delay: 3.3s; }
-.letter:nth-child(4) { animation-delay: 3.4s; }
-.letter:nth-child(5) { animation-delay: 3.5s; }
-.letter:nth-child(6) { animation-delay: 3.6s; }
+.letter:nth-child(1) { animation-delay: 2.1s; }
+.letter:nth-child(2) { animation-delay: 2.2s; }
+.letter:nth-child(3) { animation-delay: 2.3s; }
+.letter:nth-child(4) { animation-delay: 2.4s; }
+.letter:nth-child(5) { animation-delay: 2.5s; }
+.letter:nth-child(6) { animation-delay: 2.6s; }
 
 @keyframes drop {
   0% {
     transform: translate(-50%, -100px);
+    opacity: 1;
+  }
+  80% {
+    transform: translate(-50%, 0);
+    opacity: 1;
   }
   100% {
     transform: translate(-50%, 0);
+    opacity: 0;
   }
 }
 
