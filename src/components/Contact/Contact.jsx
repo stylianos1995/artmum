@@ -59,9 +59,11 @@ const Contact = () => {
                 value={formData.orderType}
                 onChange={handleChange}
               >
-                <option value="custom">Προσαρμοσμένο Έργο</option>
-                <option value="print">Εκτύπωση</option>
-                <option value="commission">Παραγγελία</option>
+                <option value="custom">Βιβλία ευχών</option>
+                <option value="print">Βούρτσες </option>
+                <option value="commission">Καδρα-Πορτραίτα</option>
+                <option value="commission">Λαμπάδες</option>
+                <option value="commission">Τοιχογραφίες/Τζαμαρίες</option>
               </select>
             </div>
 

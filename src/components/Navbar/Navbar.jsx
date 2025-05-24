@@ -28,6 +28,7 @@ const Navbar = () => {
         <div className={`navbar-links ${isMenuOpen ? 'active' : ''}`}>
           <a href="#home" className="nav-link" onClick={handleLinkClick}>Αρχική</a>
           <a href="#work" className="nav-link" onClick={handleLinkClick}>Έργα</a>
+          <a href="#shop" className="nav-link" onClick={handleLinkClick}>Κατάστημα</a>
           <a href="#about" className="nav-link" onClick={handleLinkClick}>Σχετικά</a>
           <a href="#contact" className="nav-link" onClick={handleLinkClick}>Επικοινωνία</a>
         </div>

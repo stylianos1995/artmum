@@ -5,6 +5,7 @@ import Hero from './components/Hero/Hero'
 import MyWork from './components/MyWork/MyWork'
 import About from './components/About/About'
 import Contact from './components/Contact/Contact'
+import Shop from './components/Shop/Shop'
 import Footer from './components/Footer/Footer'
 import './App.css'
 import './styles/variables.css'
@@ -38,6 +39,7 @@ function App() {
           <Hero />
           <MyWork />
           <About />
+          <Shop />
           <Contact />
           <Footer />
         </>
