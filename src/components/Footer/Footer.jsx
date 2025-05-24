@@ -9,7 +9,7 @@ const Footer = () => {
     {
       platform: 'Instagram',
       handle: '@artmum',
-      url: 'https://instagram.com/artmum',
+      url: 'https://www.instagram.com/art._.mum/',
       icon: 'fab fa-instagram'
     },
     {
@@ -21,7 +21,7 @@ const Footer = () => {
     {
       platform: 'TikTok',
       handle: '@artmum',
-      url: 'https://tiktok.com/@artmum',
+      url: 'https://www.tiktok.com/@art._.mum',
       icon: 'fab fa-tiktok'
     }
   ];
@@ -48,11 +48,14 @@ const Footer = () => {
                 <span className="social-label">{social.platform}</span>
                 <div className="social-value">
                   <span>{social.handle}</span>
-                  <i 
-                    className={`${social.icon} social-icon`}
-                    onClick={() => copyToClipboard(social.handle)}
-                    title={`Αντιγραφή ${social.platform}`}
-                  ></i>
+                  <a
+                    href={social.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    title={`Μετάβαση στο ${social.platform}`}
+                  >
+                    <i className={`${social.icon} social-icon`}></i>
+                  </a>
                 </div>
               </div>
             ))}

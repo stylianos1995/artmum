@@ -30,7 +30,7 @@ const Navbar = () => {
           <a href="#work" className="nav-link" onClick={handleLinkClick}>Έργα</a>
           <a href="#shop" className="nav-link" onClick={handleLinkClick}>Κατάστημα</a>
           <a href="#about" className="nav-link" onClick={handleLinkClick}>Σχετικά</a>
-          <a href="#contact" className="nav-link" onClick={handleLinkClick}>Επικοινωνία</a>
+          <a href="#footer" className="nav-link" onClick={handleLinkClick}>Επικοινωνία</a>
         </div>
 
         <button 

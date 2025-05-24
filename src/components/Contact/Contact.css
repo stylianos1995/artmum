@@ -1,204 +1,134 @@
-.contact {
-  padding: 6rem 2rem;
-  background: var(--lavender);
-  min-height: 100vh;
+/* Modal Overlay */
+.contact-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(20, 10, 30, 0.88);
+  z-index: 3000;
   display: flex;
   align-items: center;
-}
-
-.contact-container {
-  max-width: 1200px;
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 4rem;
-  width: 100%;
-}
-
-.contact-container.single {
-  display: flex;
   justify-content: center;
-  align-items: center;
-  gap: 0;
+  animation: fadeIn 0.25s;
 }
 
-.contact-info, .contact-form {
-  padding: 2rem;
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
 }
 
-.contact-info h2, .contact-form h2 {
-  font-size: 2.5rem;
-  margin-bottom: 1.5rem;
-  color: var(--dark-purple);
-  text-align: center;
-}
-
-.contact-info p {
-  color: #666;
-  margin-bottom: 2rem;
-}
-
-.social-links {
+/* Modal Content */
+.contact-modal .contact-form {
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 8px 40px rgba(107, 78, 113, 0.18);
+  padding: 2.5rem 2rem 2rem 2rem;
+  max-width: 420px;
+  margin: 0 auto;
+  width: 100%;
+  position: relative;
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
+  gap: 1.2rem;
 }
 
-.social-item {
+.contact-modal .contact-form h2 {
+  font-size: 1.6rem;
+  margin-bottom: 1.2rem;
+  color: var(--primary-purple, #6b4e71);
+  text-align: center;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+.contact-modal .form-group {
+  margin-bottom: 1.2rem;
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
 }
 
-.social-label {
-  font-size: 0.9rem;
-  color: #666;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-}
-
-.social-value {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-}
-
-.social-value span {
-  font-size: 1.1rem;
-  color: #1a1a1a;
-}
-
-.social-value button {
-  padding: 0.5rem 1rem;
-  background: #f5f5f5;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-
-.social-value button:hover {
-  background: #e0e0e0;
-}
-
-/* Form Styles */
-.form-group {
-  margin-bottom: 2rem;
-}
-
-.form-group label {
-  display: block;
-  margin-bottom: 0.8rem;
-  color: var(--dark-purple);
+.contact-modal .form-group label {
   font-size: 1rem;
+  color: var(--dark-purple, #3d2c41);
   font-weight: 500;
 }
 
-.form-group input,
-.form-group select,
-.form-group textarea {
-  width: 100%;
-  padding: 1rem;
-  border: 2px solid var(--light-purple);
-  border-radius: 10px;
+.contact-modal .form-group input,
+.contact-modal .form-group select,
+.contact-modal .form-group textarea {
+  padding: 0.7rem 1rem;
+  border-radius: 8px;
+  border: 1.5px solid var(--light-purple, #c3b6d6);
   font-size: 1rem;
-  transition: all 0.3s ease;
-  background: var(--off-white);
+  background: var(--off-white, #faf8fc);
+  transition: border-color 0.2s, box-shadow 0.2s;
+  box-shadow: 0 1px 4px rgba(107, 78, 113, 0.04);
 }
 
-.form-group input:focus,
-.form-group select:focus,
-.form-group textarea:focus {
+.contact-modal .form-group input:focus,
+.contact-modal .form-group select:focus,
+.contact-modal .form-group textarea:focus {
+  border-color: var(--primary-purple, #6b4e71);
   outline: none;
-  border-color: var(--primary-purple);
-  box-shadow: 0 0 0 4px rgba(107, 78, 113, 0.1);
-  background: var(--white);
+  box-shadow: 0 0 0 3px rgba(107, 78, 113, 0.10);
 }
 
-.form-group textarea {
-  min-height: 150px;
+.contact-modal .form-group textarea {
+  min-height: 90px;
   resize: vertical;
 }
 
-.submit-btn {
+.contact-modal .submit-btn {
   width: 100%;
-  padding: 1.2rem;
-  background: var(--primary-purple);
-  color: var(--white);
+  padding: 0.9rem 0;
+  background: linear-gradient(90deg, var(--primary-purple, #6b4e71) 60%, var(--accent-purple, #a084ca) 100%);
+  color: #fff;
   border: none;
-  border-radius: 10px;
-  font-size: 1.1rem;
+  border-radius: 8px;
+  font-size: 1.08rem;
   font-weight: 600;
+  margin-top: 0.5rem;
   cursor: pointer;
-  transition: all 0.3s ease;
-  margin-top: 1rem;
+  transition: background 0.2s, box-shadow 0.2s, transform 0.15s;
+  box-shadow: 0 2px 10px rgba(107, 78, 113, 0.10);
 }
 
-.submit-btn:hover {
-  background: var(--accent-purple);
-  transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(107, 78, 113, 0.2);
+.contact-modal .submit-btn:hover {
+  background: linear-gradient(90deg, var(--accent-purple, #a084ca) 60%, var(--primary-purple, #6b4e71) 100%);
+  box-shadow: 0 4px 18px rgba(107, 78, 113, 0.13);
+  transform: translateY(-1px) scale(1.01);
 }
 
-.submit-btn:active {
-  transform: translateY(0);
+.close-contact-modal {
+  position: absolute;
+  top: -2.5rem;
+  right: 0;
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 2.2rem;
+  cursor: pointer;
+  z-index: 10;
+  transition: color 0.2s;
+  text-shadow: 0 2px 8px #000;
 }
 
-.contact-form {
-  width: 100%;
-  max-width: 600px;
-  margin: 0 auto;
-  background: var(--white);
-  box-shadow: 0 8px 32px rgba(107, 78, 113, 0.15);
-  border-radius: 20px;
-  padding: 3rem;
+.close-contact-modal:hover {
+  color: var(--accent-purple, #a084ca);
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-  .contact {
-    padding: 4rem 1rem;
+@media (max-width: 600px) {
+  .contact-modal .contact-form {
+    padding: 1.2rem 0.5rem 1.2rem 0.5rem;
+    max-width: 98vw;
   }
-
-  .contact-container {
-    grid-template-columns: 1fr;
-    gap: 2rem;
+  .contact-modal .contact-form h2 {
+    font-size: 1.2rem;
   }
-
-  .contact-form {
-    padding: 2rem;
-    margin: 0 1rem;
-  }
-
-  .contact-info h2, .contact-form h2 {
-    font-size: 2rem;
-  }
-
-  .form-group {
-    margin-bottom: 1.5rem;
-  }
-
-  .form-group input,
-  .form-group select,
-  .form-group textarea {
-    padding: 0.8rem;
-  }
-
-  .submit-btn {
-    padding: 1rem;
-  }
-}
-
-@media (max-width: 480px) {
-  .contact {
-    padding: 3rem 1rem;
-  }
-
-  .contact-form {
-    padding: 1.5rem;
-  }
-
-  .contact-info h2, .contact-form h2 {
-    font-size: 1.8rem;
+  .close-contact-modal {
+    top: -2rem;
+    font-size: 1.7rem;
   }
 }

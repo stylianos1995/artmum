@@ -4,7 +4,6 @@ import Navbar from './components/Navbar/Navbar'
 import Hero from './components/Hero/Hero'
 import MyWork from './components/MyWork/MyWork'
 import About from './components/About/About'
-import Contact from './components/Contact/Contact'
 import Shop from './components/Shop/Shop'
 import Footer from './components/Footer/Footer'
 import './App.css'
@@ -40,7 +39,6 @@ function App() {
           <MyWork />
           <About />
           <Shop />
-          <Contact />
           <Footer />
         </>
       )}

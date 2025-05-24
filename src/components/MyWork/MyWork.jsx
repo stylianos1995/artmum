@@ -1,10 +1,10 @@
 import { useState, useEffect } from 'react';
 import './MyWork.css';
-import image1 from '../../assets/bear.jpg';
+import image1 from '../../assets/Artmum/wish/472105697_18050971799319493_2266948486486224731_n.jpg';
 import image2 from '../../assets/room.jpg';
-import image3 from '../../assets/santa.jpg';
-import image4 from '../../assets/truck.jpg';
-import image5 from '../../assets/fairy.jpg';
+import image3 from '../../assets/Artmum/Lampades/486614396_18059108990319493_7963554867145338918_n.jpg';
+import image4 from '../../assets/Artmum/Brush/497504662_18063688775319493_2998909560523063238_n.jpg';
+import image5 from '../../assets/Artmum/kadra/470816146_18048762731319493_6918352292249955877_n.jpg';
 
 const MyWork = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -15,35 +15,35 @@ const MyWork = () => {
       title: "Αρκούδος",
       description: "Χειροποίητα προσκλήσεις με σχέδια και χρώματα της επιλογής σας",
       image: image1,
-      category: "Προσκλήσεις"
+      category: "Βιβλία ευχών"
     },
     {
       id: 2,
       title: "Δάδος",
       description: "Καταγράφοντας την ουσία της φυσικής ομορφιάς",
       image: image2,
-      category: "Παιδικά Δωμάτια"
+      category: "Τοιχογραφίες/Τζαμαρίες"
     },
     {
       id: 3,
       title: "Χριστούγεννα",
       description: "Θεματίκα σχέδια για κάθε κατάστημα",
       image: image3,
-      category: "Μαγαζιά"
+      category: "Λαμπάδες"
     },
     {
-      id: 1,
+      id: 4,
       title: "Αφηρημένα Όνειρα",
       description: "Ένα ταξίδι μέσα από χρώματα και συναισθήματα",
       image: image4,
-      category: "Ψηφιακή Τέχνη"
+      category: "Βούρτσες"
     },
     {
-      id: 1,
-      title: "Αφηρημένα Όνειρα",
+      id: 5,
+      title: "Νεράιδα",
       description: "Ένα ταξίδι μέσα από χρώματα και συναισθήματα",
       image: image5,
-      category: "Ψηφιακή Τέχνη"
+      category: "Καδρα-Πορτραίτα"
     }
   ];
 

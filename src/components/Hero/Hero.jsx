@@ -30,7 +30,7 @@ const Hero = () => {
           </p>
           <div className="hero-cta">
             <a href="#work" className="cta-button">Δείτε τη Συλλογή</a>
-            <a href="#contact" className="cta-button secondary">Παραγγελία Έργου</a>
+            <a href="#shop" className="cta-button secondary">Παραγγελία Έργου</a>
           </div>
         </div>
       </div>

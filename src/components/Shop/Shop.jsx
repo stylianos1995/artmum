@@ -26,6 +26,7 @@ import wish4 from '../../assets/Artmum/wish/490943702_18061378781319493_67969318
 import wish5 from '../../assets/Artmum/wish/490447871_18061378763319493_2825137921009667427_n.jpg';
 import wish6 from '../../assets/Artmum/wish/474714956_18052536305319493_3428501179296912865_n.jpg';
 import wish7 from '../../assets/Artmum/wish/472105697_18050971799319493_2266948486486224731_n.jpg';
+import Contact from '../Contact/Contact';
 
 const brushArtworks = [
   { id: 1, title: 'Πριγκίπισσες', image: brush1 },
@@ -95,7 +96,7 @@ const categories = [
   },
   {
     id: 5,
-    title: "Καδρα-Πορτραίτα",
+    title: "Κάδρα-Πορτρέτα",
     image: kadraArtworks[0]?.image,
     description: "Μοναδικά πορτραίτα και καδράρισμα"
   }
@@ -106,13 +107,14 @@ const categoryPriceRanges = {
   'Βούρτσες': '15€ – 30€',
   'Λαμπάδες': '40€ – 80€',
   'Τοιχογραφίες/Τζαμαρίες': '300€ – 1200€',
-  'Καδρα-Πορτραίτα': '50€ – 400€',
+  'Κάδρα-Πορτρέτα': '50€ – 400€',
 };
 
 const Shop = () => {
   const [selectedCategory, setSelectedCategory] = useState(null);
   const [showOrderForm, setShowOrderForm] = useState(false);
   const [lightboxImage, setLightboxImage] = useState(null);
+  const [showContactModal, setShowContactModal] = useState(false);
 
   const handleCategoryClick = (category) => {
     setSelectedCategory(category);
@@ -152,6 +154,13 @@ const Shop = () => {
     e.preventDefault();
     setShowOrderForm(false);
     // Optionally, show a success message here
+  };
+
+  const handleContactOpen = () => setShowContactModal(true);
+  const handleContactClose = (e) => {
+    if (!e || e.target.classList.contains('contact-modal') || e.target.classList.contains('close-contact-modal')) {
+      setShowContactModal(false);
+    }
   };
 
   return (
@@ -212,7 +221,7 @@ const Shop = () => {
                       </div>
                     </div>
                   ))
-                ) : selectedCategory.title === 'Καδρα-Πορτραίτα' ? (
+                ) : selectedCategory.title === 'Κάδρα-Πορτρέτα' ? (
                   kadraArtworks.map(art => (
                     <div key={art.id} className="artwork-item">
                       <div className="artwork-image" onClick={() => handleImageClick(art.image)} style={{cursor:'pointer'}}>
@@ -289,6 +298,18 @@ const Shop = () => {
                   </div>
                 </div>
               )}
+            </div>
+          )}
+          {!selectedCategory && (
+            <button className="order-btn" style={{marginTop: '2rem'}} onClick={handleContactOpen}>
+              Custom Order
+            </button>
+          )}
+          {showContactModal && (
+            <div className="contact-modal" onClick={handleContactClose} style={{position:'fixed',top:0,left:0,width:'100vw',height:'100vh',background:'rgba(20,10,30,0.88)',zIndex:3000,display:'flex',alignItems:'center',justifyContent:'center'}}>
+              <div style={{position:'relative',zIndex:3100}}>
+                <Contact />
+              </div>
             </div>
           )}
         </div>
